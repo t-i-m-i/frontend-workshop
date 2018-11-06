@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 
+    Points:
+    - listing on floats vs flex vs grid (gaps in px and %, horiz and vert)
+     */
+     
+     * { box-sizing: border-box; }
+
+      body, ul { margin: 0; padding: 0; list-style: none; }
+
+      .wrapper { max-width: 1000px; overflow: hidden; background: yellow; margin: 0 auto; }
+
+      .products_list { 
+        width: 101%; margin: 0 0 0 -1%; 
+      }
+      .products_list li { 
+        display: block; float: left; text-align: center;
+        width: 49%; margin: 0 0 1% 1%;  
+      }
+      .products_list li a { display: block; border: 1px solid #333; }
+
+      @media (min-width: 720px) {
+      	.products_list { width: 102%; }
+      	.products_list li { width: 32%; }
+      }
+
+      @media (min-width: 1000px) {
+      	.products_list { width: 101%; }
+      	.products_list li { width: 24%; }
+      }
+     
+  </style>
+</head>
+<body>
+  
+  <div class="wrapper">
+    <ul class="products_list">
+      <li><a href="#">Item</a></li>
+      <li><a href="#">Item</a></li>
+      <li><a href="#">Item</a></li>
+      <li><a href="#">Item</a></li>
+      <li><a href="#">Item</a></li>
+      <li><a href="#">Item</a></li>
+      <li><a href="#">Item</a></li>
+      <li><a href="#">Item</a></li>
+      <li><a href="#">Item</a></li>
+      <li><a href="#">Item</a></li>
+    </ul>  
+  </div>
+  
+</body>
+</html>

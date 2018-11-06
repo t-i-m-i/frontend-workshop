@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Units</title>
+  <style>
+    
+    /*
+    
+    use rems instead of ems for scalable component spacing.
+    
+    In most browsers, a user can set their default browser font-size to be a different size to the default (typically 16px). If the user sets their default to 20px, all font-sizes should scale accordingly.
+    
+    MY NOTICE: todays browsers zoom entire page, not just font-size.
+    
+    While REMs certainly have their uses, I’m willing to bet that most people use REMs because they are seen as cooler than pixels. I rarely see a project where someone actually changes the root HTML font-size depending on screen size; and rightfully so. Unless you’ve got a very typographically heavy design, you’re unlikely to want to scale everything at once.
+    
+    
+    What about EMs?
+
+    EMs perform initially in a similar fashion to REMs, until it comes to nesting. I’ve never been a fan of EMs, especially when it comes to font-sizes. For example, take a div with a font-size of 2em, then add a paragraph with a font-size of 2em. The font-size of that paragraph is now 2ems relative to the div. I quickly lose track of the maths and what size is what, and it quickly becomes unmanageable. This is what REMs solve - the size always refers back to the root.
+    
+    MY NOTICE: em's are good for proportional local elements eg. buttons => show example
+    
+     */
+    
+    html { font-size: 100%; }
+    
+    div { background: tomato; width: 100px; height: 100px; float: left;
+      margin: 1rem;
+      font-size: 1rem;
+      
+      /* 
+        calculate REM in SASS:
+        
+        $remBase: 16px;
+
+        @function calculate-rem($size, $baseSize: $remBase) {
+          @return ($size/$baseSize) * 1rem;
+        }
+
+        @function r($size) {
+          @return calculate-rem($size);
+        }
+        
+        font-size: r(16px);  
+      */
+    }
+    
+  </style>
+</head>
+<body>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+  <div>Lorem ipsum</div>
+</body>
+</html>

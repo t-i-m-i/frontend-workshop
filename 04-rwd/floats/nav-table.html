@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+      /* 
+        Points:
+        - floats vs display table which gives us full widht nav
+        - table-layout fixed vs auto
+       */
+      
+      * { box-sizing: border-box; }
+
+      body, ul { margin: 0; padding: 0; list-style: none; }
+
+      .wrapper { width: 96%; max-width: 1000px; overflow: hidden; background: yellow; }
+
+      .nav { display: table; table-layout: fixed; width: 100%; }
+      .nav li.nav_desktop { display: none; }
+      .nav li.nav_mobile { display: table-cell; }
+      .nav a { display: block; padding: 1rem 0; text-align: center; border: 1px solid #333 }
+
+      @media (min-width: 720px) {
+      	.nav { table-layout: auto; }
+      	.nav li.nav_desktop { display: table-cell; }
+      	.nav li.nav_mobile { display: none; }
+      }
+      @media (min-width: 1000px) {
+      	.nav { table-layout: fixed; }
+      }
+  </style>
+</head>
+<body>
+  
+  <div class="warapper">
+    <ul class="nav">
+      <li class="nav_desktop"><a href="#">Buty męskie</a></li>
+      <li class="nav_desktop"><a href="#">Buty damskie</a></li>
+      <li class="nav_desktop"><a href="#">Buty dziecięce</a></li>
+      <li class="nav_desktop"><a href="#">Kolekcje</a></li>
+      <li class="nav_desktop"><a href="#">Nowości</a></li>
+      <li class="nav_desktop"><a href="#">Promocje</a></li>
+      <li class="nav_mobile"><a href="#">Menu</a></li>
+      <li class="nav_mobile"><a href="#">Szukaj</a></li>
+      <li class="nav_mobile"><a href="#">Konto</a></li>
+      <li class="nav_mobile"><a href="#">Koszyk</a></li>
+    </ul>    
+  </div>
+    
+</body>
+</html>

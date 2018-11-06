@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  
+  /* 
+  html5 form validation
+   */
+    
+    /* design >>> */
+    form { background: #f7f7f7; padding: 2em; font-size: 18px; font-family: arial; }
+    form > div { margin-bottom: 1em; }
+    label { display: block; margin-bottom: .25em; }
+    input { padding: 0.5em; font-size: inherit; font-family: inherit; }
+    input[type=submit] { 
+      margin-top: 200px; 
+      /* styling is not applied: */
+      /* font-size: 18px;  */
+      /* padding: .5em 1em;  */
+      /* border triggers styling: */
+      border: 1px solid #333; 
+    }
+    /* <<< design */
+    
+    
+    /* input:invalid { border: 1px solid red; } */
+    .was-validated input:invalid { border: 1px solid red; }
+    
+    .invalid-feedback { visibility: hidden; height: 0; opacity: 0; color: red; transition: opacity 1500ms; padding: .25em 0; }
+    .was-validated input:invalid ~ .invalid-feedback { visibility: visible; height: auto; opacity: 1; }
+    
+    
+  </style>
+</head>
+<body>
+  
+  <!-- <form action="">
+    <label>Cc: <input type=email multiple name=cc list=contacts style="width: 100%;"></label>
+    <datalist id="contacts">
+      <option value="hedral@damowmow.com">
+      <option value="pillar@example.com">
+      <option value="astrophy@cute.example">
+      <option value="astronomy@science.example.org">
+    </datalist>
+  </form> -->
+  
+  <form id="form" action="" novalidate>
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" type="text" required>
+      <div class="invalid-feedback">Please enter your name.</div>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="emai;" type="email" required>
+      <div class="invalid-feedback">Please enter your email.</div>
+    </div>
+    <div>
+      <label for="phone">Phone number:</label>
+      <input id="phone" type="tel" required>
+      <div class="invalid-feedback">Please enter your phone number.</div>
+    </div>
+    <div>
+      <label for="secret">Secret number:</label>
+      <input id="secret" type="text">
+      <div class="invalid-feedback">Wrong secret.</div>
+    </div>
+    <div class="submit">
+      <input type="submit" value="Send">
+    </div>
+  </form>
+  
+  
+  
+  <script>
+    const form = document.getElementById('form');
+    const secret = document.getElementById('secret');
+    
+    function checkSecret() {
+      if (secret.value != '555') {
+        secret.setCustomValidity('Wrong secret');
+      } else {
+        secret.setCustomValidity('');
+      }
+    }
+        
+    form.addEventListener('submit', function(e) {
+        
+        checkSecret();
+        
+        if (form.checkValidity() === false) {
+          e.preventDefault();
+          form.scrollIntoView({
+            block: "start", // start, center, end, nearest. Defaults to center.
+            behavior: "smooth" // auto, instant, smooth. Defaults to auto.
+          });
+        }
+        form.classList.add('was-validated');
+      }, false);
+    
+  </script>
+</body>
+</html>

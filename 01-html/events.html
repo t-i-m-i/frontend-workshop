@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .outside { background: tomato; padding: 2em; }
+    .inside { background: lime; padding: 1em; }
+  </style>
+</head>
+<body>
+  
+  <!--  
+  Points:
+  - capturing and bubbling
+-->
+  
+  <div class="outside">
+    <div class="inside">click me</div>
+  </div>
+  
+  <script>
+    
+    const outside = document.querySelector('.outside');
+    const inside = document.querySelector('.inside');
+    
+    outside.addEventListener('click', function () {
+      alert('outside');
+    }, true);
+    
+    inside.addEventListener('click', function () {
+      alert('inside');
+    }, false);
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .wrapper { display: flex; width: 500px; background: #ddd;  }
+    
+    .title { width: 25%; padding: 16px; overflow: hidden; }
+    .title--hyphen { hyphens: auto; }
+    .title--truncate { text-overflow: ellipsis; }
+    
+    .desc { width: 75%; padding: 16px; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title">Strassenbahnhaltestelle</div>
+    <div class="desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
+  </div>
+  <div class="wrapper">
+    <div class="title title--hyphen">Strassenbahnhaltestelle</div>
+    <div class="desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
+  </div>
+  <div class="wrapper">
+    <div class="title title--truncate" title="Strassenbahnhaltestelle">Strassenbahnhaltestelle</div>
+    <div class="desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
+  </div>
+</body>
+</html>

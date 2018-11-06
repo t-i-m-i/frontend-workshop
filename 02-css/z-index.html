@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  
+  /* 
+  
+   absolute positioning fixes an element in place relative to the <html> element or its nearest positioned ancestor, fixed positioning fixes an element in place relative to the browser viewport itself. 
+  
+  
+   */
+    
+    div { position: relative; }
+    .a { z-index: 1; background: tomato; width: 400px; height: 60px; }
+    .b { z-index: 99; background: lime; width: 300px; height: 50px;  }
+    .c { z-index: 2; background: black; width: 200px; height: 50px; margin-top: -50px;  }
+    
+  </style>
+</head>
+<body>
+  <!-- 
+  Note that z-index is not a global layering system, but only differentiates ordering within each positioned parent.
+ -->
+ 
+ 
+  <div class="a">
+    <div class="b"></div>
+  </div>
+  <div class="c"></div>
+ 
+ 
+</body>
+</html>

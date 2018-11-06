@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *, *:after, *:before { box-sizing: border-box; }
+    body { font-family: arial; margin: 0; }
+    
+    /* flex grow */
+    
+    .container { 
+      text-align: center; margin-bottom: 32px;
+      display: flex; 
+      justify-content: space-between; 
+    }
+    .container > div { 
+      background: tomato;
+      /* margin: 10px;  */
+      padding: 10px;
+      border: 1px solid lime;
+      flex-grow: 1; 
+    }
+    
+    /* list */
+    
+    .list {
+      /* 1. first look at user agent stylesheet */
+      /* 2. reset it */
+      margin: 0; padding: 0; list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* justify-content: flex-start; */
+    }
+    
+    .list > li {
+      text-align: center; padding: 10px; margin-bottom: 1%; background: tomato; border: 1px solid lime;
+      /* width: 24%; */
+      
+      flex: 0;
+      flex-basis: 24%;
+      
+      /* 3. align items left at the end of list  */
+      /* margin-right: 1%;  */
+    }
+    .list > li:last-child,
+    .list > li:nth-child(4n) {
+      /* margin-right: 0; */
+      background: lime;
+    }
+    .list > li:last-child { background: blue; }
+    
+    /* 3. align items left at the end of list  */
+    
+    /* .list:after {
+      content: "";
+      flex-basis: 24%; 
+      flex: auto;
+      background: hotpink;
+    } */
+    
+    
+    
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div>a</div>
+    <div>b</div>
+    <div>c</div>
+  </div>
+  
+  
+  <ul class="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>9</li>
+  </ul>
+  
+  
+</body>
+</html>

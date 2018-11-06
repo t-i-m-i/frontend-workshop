@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form class="js--form-1" action="">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+    
+    <!-- 1. we can not nest forms -->
+    <!-- <form class="js--form-2" action="">
+      <div>
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company">
+      </div>
+    </form> -->
+    
+    <!-- 2. input for form#id  -->
+    <div>
+      <label for="company">Company:</label>
+      <input form="second_form" type="text" id="company" name="company">
+    </div>
+    <div>
+      <button form="second_form" type="submit">Send second form</button>
+    </div>
+    
+    <div>
+      <button type="submit">Send first form</button>
+    </div>
+  </form>
+  
+  <!-- 2. input for form#id  -->
+  <form id="second_form" class="js--form-2" action=""></form>
+  
+  <script>
+    
+    $form1 = document.querySelector('.js--form-1');
+    $form2 = document.querySelector('.js--form-2');
+    
+    $form1.addEventListener('submit', handleFirstForm);
+    $form2.addEventListener('submit', handleSecondForm);
+    
+    function handleFirstForm(e) {
+      e.preventDefault();
+      console.log('first form submitted');
+      const formData = new FormData($form1);
+      for(var pair of formData.entries()) {
+         console.log(pair[0]+ ', '+ pair[1]); 
+      }
+    }
+    
+    function handleSecondForm(e) {
+      e.preventDefault();
+      console.log('second form submitted');
+      const formData = new FormData($form2);
+      for(var pair of formData.entries()) {
+         console.log(pair[0]+ ', '+ pair[1]); 
+      }
+    }
+    
+  </script>
+  
+</body>
+</html>

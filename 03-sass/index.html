@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Dev Meetings</h1>
+  
+  <p>
+    <a href class="btn-important">Button</a>
+    <a href class="btn-success">Button</a>
+  </p>
+  
+  <table>
+    <tr>
+      <th class="col col--no">No</th>
+      <th class="col col--item">Item</th>
+      <th class="col col--desc">Description</th>
+    </tr>
+    <tr>
+      <td class="data data--no">1.</td>
+      <td class="data data--item">Item</td>
+      <td class="data data--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod unde optio in, adipisci quos recusandae magni doloremque, architecto laboriosam, quisquam quo sequi odit esse. Facilis nobis provident quis delectus eos.</td>
+    </tr>
+    <tr>
+      <td class="data data--no">1.</td>
+      <td class="data data--item">Item</td>
+      <td class="data data--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod unde optio in, adipisci quos recusandae magni doloremque, architecto laboriosam, quisquam quo sequi odit esse. Facilis nobis provident quis delectus eos.</td>
+    </tr>
+    <tr>
+      <td class="data data--no">1.</td>
+      <td class="data data--item">Item</td>
+      <td class="data data--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod unde optio in, adipisci quos recusandae magni doloremque, architecto laboriosam, quisquam quo sequi odit esse. Facilis nobis provident quis delectus eos.</td>
+    </tr>
+    <tr>
+      <td class="data data--no">1.</td>
+      <td class="data data--item">Item</td>
+      <td class="data data--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod unde optio in, adipisci quos recusandae magni doloremque, architecto laboriosam, quisquam quo sequi odit esse. Facilis nobis provident quis delectus eos.</td>
+    </tr>
+    <tr>
+      <td class="data data--no">1.</td>
+      <td class="data data--item">Item</td>
+      <td class="data data--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod unde optio in, adipisci quos recusandae magni doloremque, architecto laboriosam, quisquam quo sequi odit esse. Facilis nobis provident quis delectus eos.</td>
+    </tr>
+    <tr>
+      <td class="data data--no">1.</td>
+      <td class="data data--item">Item</td>
+      <td class="data data--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod unde optio in, adipisci quos recusandae magni doloremque, architecto laboriosam, quisquam quo sequi odit esse. Facilis nobis provident quis delectus eos.</td>
+    </tr>
+  </table>
+  
+  
+  
+  
+  <script>
+  
+  const heading = document.querySelector('h1');
+  heading.innerHTML = sparanWrap(heading.textContent);
+  
+  function sparanWrap(word) {
+    return [...word].map((letter, index) => `<span class="char${index}">${letter}</span>`).join('');
+  }
+    
+  </script>
+  
+</body>
+</html>

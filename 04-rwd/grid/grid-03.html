@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    
+    ul { 
+      margin: 0; padding: 0; list-style: none; 
+      display: grid;
+      /* grid-template-columns: 49% 49%;  */
+      grid-template-columns: 1fr 1fr; 
+      grid-column-gap: 10px;  
+      grid-row-gap: 10px;
+      justify-content: space-between;
+      
+    }
+    @media (min-width: 768px) {
+      ul {
+          /* grid-template-columns: 32.33333% 32.33333% 32.33333%;  */
+          grid-template-columns: 1fr 1fr 1fr; 
+      }
+    }
+    @media (min-width: 1024px) {
+      ul {
+        /* % -> odstępy nierówne 10px */
+          /* grid-template-columns: 24% 24% 24% 24%;  */
+          
+          /* fr -> odstępy równe 10px */
+          grid-template-columns: 1fr 1fr 1fr 1fr; 
+          
+          /* 
+            px, %, fr 
+          */
+          /* width: 1000px;
+          grid-template-columns: 50px 20% 2fr 1fr;  */
+          
+          
+      }
+    }
+    
+    li { 
+      border: 1px solid #ddd; padding: 1em; 
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+  </ul>
+</body>
+</html>

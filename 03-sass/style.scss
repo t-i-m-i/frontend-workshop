@@ -1,0 +1,92 @@
+// ---------------------------------------------------------------------
+
+$background-color: #f7f7f7;
+$border-color: lime;
+$border-width: 2px; 
+$base-color: tomato;
+
+@mixin border-table($border-width: 1px, $border-color: #333) {
+  border: $border-width solid $border-color;
+}
+
+html { 
+  background: $background-color; 
+}
+
+table { border-collapse: collapse; }
+
+// ---------------------------------------------------------------------
+
+// import font weight 400 and 700
+// import font weight 400 and 600 (semibold)
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// ---------------------------------------------------------------------
+
+
+// @extend
+.btn {
+   border: 1px solid #333; border-radius: 2px; padding: .5em 1em; font-size: 18px; display: inline-block;
+}
+.btn-important {
+  @extend .btn;
+  background: red;
+}
+.btn-success {
+  @extend .btn;
+  background: green;
+}
+
+// better alternative to @extend -> BEM
+
+// .col { padding: 10px; background: #696969; color: #fff; }
+// .col--no { widht: 20px; }
+// .col--item { width: 150px; }
+
+.col { 
+  padding: 10px; background: #696969; color: #fff; 
+  
+  &--no {
+    width: 20px;
+  }
+  &--item {
+    width: 150px;
+  }
+}
+
+.data {
+  padding: 10px;
+}
+
+tr {
+  @include border-table($border-width, $border-color);
+  @for $i from 1 through 7 {
+    &:nth-child(#{$i}) {
+      background-color: lighten($base-color, 50%-($i)*5%);
+    }
+  }
+}
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+  @for $i from 0 through 11 {
+    .char#{$i} {
+      color: adjust-hue($base-color, 3deg * $i);
+    }
+  }
+}
+
+
+
+
+
+
+// ---------------------------------------------------------------------
+
+// breakpoint and media queries
+
+// ---------------------------------------------------------------------
+
+
