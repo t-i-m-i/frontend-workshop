@@ -58,3 +58,57 @@ $font-weight-bold: 700;
 .data {
   padding: 10px;
 }
+
+tr {
+  @include border-table($border-width, $border-color);
+}
+
+// ---------------------------------------------------------------------
+
+// breakpoint and media queries
+
+// ---------------------------------------------------------------------
+
+
+// 1.
+
+// h1 { margin: 0; font-size: 21px; }
+// @media (min-width: 768px) {
+//   h1 {
+//     font-size: 48px;  
+//   }
+// }
+// @media (min-width 1024px) {
+//   h1 {
+//     font-size: 96px;   
+//   }
+// }
+
+// 2.
+
+$breakpoints: (
+        lg: 1220px,
+        md: 1024px,
+        sm: 768px
+);
+
+@mixin bp($breakpoint) {
+  $query: map-get($breakpoints, $breakpoint);
+  @if $query != null {
+    @media (min-width: #{$query}) {
+      @content;
+    }
+  }
+}
+
+h1 { 
+  margin: 0;
+  font-size: 21px; 
+  @include bp('sm') {
+    font-size: 48px;
+  }
+  @include bp('md') {
+    font-size: 96px;
+  }
+}
+

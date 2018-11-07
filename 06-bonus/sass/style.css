@@ -1,0 +1,122 @@
+html {
+  background: #f7f7f7;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.btn, .btn-success, .btn-important {
+  border: 1px solid #333;
+  border-radius: 2px;
+  padding: 0.5em 1em;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.btn-important {
+  background: red;
+}
+
+.btn-success {
+  background: green;
+}
+
+.col {
+  padding: 10px;
+  background: #696969;
+  color: #fff;
+}
+.col--no {
+  width: 20px;
+}
+.col--item {
+  width: 150px;
+}
+
+.data {
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 21px;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 96px;
+  }
+}
+
+tr {
+  border: 2px solid lime;
+}
+tr:nth-child(1) {
+  background-color: white;
+}
+tr:nth-child(2) {
+  background-color: white;
+}
+tr:nth-child(3) {
+  background-color: snow;
+}
+tr:nth-child(4) {
+  background-color: #ffe5e0;
+}
+tr:nth-child(5) {
+  background-color: #ffcfc7;
+}
+tr:nth-child(6) {
+  background-color: #ffb9ad;
+}
+tr:nth-child(7) {
+  background-color: #ffa494;
+}
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+}
+h1 .char0 {
+  color: tomato;
+}
+h1 .char1 {
+  color: #ff6c47;
+}
+h1 .char2 {
+  color: #ff7547;
+}
+h1 .char3 {
+  color: #ff7f47;
+}
+h1 .char4 {
+  color: #ff8847;
+}
+h1 .char5 {
+  color: #ff9147;
+}
+h1 .char6 {
+  color: #ff9a47;
+}
+h1 .char7 {
+  color: #ffa347;
+}
+h1 .char8 {
+  color: #ffad47;
+}
+h1 .char9 {
+  color: #ffb647;
+}
+h1 .char10 {
+  color: #ffbf47;
+}
+h1 .char11 {
+  color: #ffc847;
+}
+
+/*# sourceMappingURL=style.css.map */

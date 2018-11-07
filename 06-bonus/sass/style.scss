@@ -38,7 +38,7 @@ $font-weight-bold: 700;
   background: green;
 }
 
-// alternative to @extend -> BEM
+// better alternative to @extend -> BEM
 
 // .col { padding: 10px; background: #696969; color: #fff; }
 // .col--no { widht: 20px; }
@@ -57,4 +57,58 @@ $font-weight-bold: 700;
 
 .data {
   padding: 10px;
+}
+
+
+// ---------------------------------------------------------------------
+
+// breakpoint and media queries
+
+// ---------------------------------------------------------------------
+
+$breakpoints: (
+        lg: 1220px,
+        md: 1024px,
+        sm: 768px
+);
+
+@mixin bp($breakpoint) {
+  $query: map-get($breakpoints, $breakpoint);
+  @if $query != null {
+    @media (min-width: #{$query}) {
+      @content;
+    }
+  }
+}
+
+h1 { 
+  margin: 0;
+  font-size: 21px; 
+  @include bp('sm') {
+    font-size: 48px;
+  }
+  @include bp('md') {
+    font-size: 96px;
+  }
+}
+
+// Bonus:
+
+tr {
+  @include border-table($border-width, $border-color);
+  @for $i from 1 through 7 {
+    &:nth-child(#{$i}) {
+      background-color: lighten($base-color, 50%-($i)*5%);
+    }
+  }
+}
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+  @for $i from 0 through 11 {
+    .char#{$i} {
+      color: adjust-hue($base-color, 3deg * $i);
+    }
+  }
 }
