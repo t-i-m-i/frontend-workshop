@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  
+  * { box-sizing: border-box; }
+  body, ul { margin: 0; padding: 0; list-style: none; }
+  
+  .nav { 
+    background: #333; overflow: hidden; 
+    
+    /* 1. */
+    display: flex;
+    
+    /* 2.  */
+    justify-content: space-between;
+  }
+  
+  /* 3. */
+  .nav li {
+    /* flex-grow: 1; */
+    
+    /* 4. even width of all item */
+            
+    /* flex-grow: 1;
+    flex-basis: 0; */
+    
+    /* flex: 1 1 0; */
+    
+    /* flex:1 it is equivalent to flex: 1 1 0 */
+    /* flex: 1; */
+    
+    /* 5. go back to proportional scaling */
+    flex-grow: 1;
+  }
+  
+  .nav a { 
+    display: block; padding: .5em 1em; text-align: center; border-right: 1px solid #ddd; color: #fff; text-decoration: none; 
+    /* background: tomato; */
+  }
+
+    
+  </style>
+</head>
+<body>
+  
+  <div class="warapper">
+    <ul class="nav">
+      <li><a href="#">Buty męskie</a></li>
+      <li><a href="#">Buty damskie</a></li>
+      <li><a href="#">Buty i ubrania dziecięce</a></li>
+      <li><a href="#">Kolekcje</a></li>
+      <li><a href="#">Nowości</a></li>
+      <li><a href="#">Promo</a></li>
+    </ul>    
+  </div>
+  
+</body>
+</html>
