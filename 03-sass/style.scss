@@ -89,4 +89,29 @@ h1 {
 
 // ---------------------------------------------------------------------
 
+$breakpoints: (
+        lg: 1220px,
+        md: 1024px,
+        sm: 768px
+);
+
+@mixin bp($breakpoint) {
+  $query: map-get($breakpoints, $breakpoint);
+  @if $query != null {
+    @media (min-width: #{$query}) {
+      @content;
+    }
+  }
+}
+
+h1 { 
+  margin: 0;
+  font-size: 21px; 
+  @include bp('sm') {
+    font-size: 48px;
+  }
+  @include bp('md') {
+    font-size: 96px;
+  }
+}
 
