@@ -1,0 +1,34 @@
+Frontend Workshop Microtasks
+
+Syntax and selectors
+https://codepen.io/t-i-m-i/pen/xQVNJo
+
+Units
+https://codepen.io/t-i-m-i/pen/GwqNXj
+
+Inheritance
+https://codepen.io/t-i-m-i/pen/YRWZBB
+
+Specificity
+https://codepen.io/t-i-m-i/pen/dQXdEo
+
+Box model
+https://codepen.io/t-i-m-i/pen/OaXqyj
+
+Floats
+https://codepen.io/maciej-kucharski/pen/aQvbGq
+
+Flex 1
+https://codepen.io/t-i-m-i/pen/wQWOXX
+
+Flex 2
+https://codepen.io/t-i-m-i/pen/qQNvVZ
+
+Flex 3
+https://codepen.io/t-i-m-i/pen/yQJwKr
+
+Positioning
+https://codepen.io/t-i-m-i/pen/QJEoRo
+
+BEM
+https://codepen.io/t-i-m-i/pen/mQEgdL
