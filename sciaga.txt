@@ -1,2 +1,6 @@
 window.innerWidth
 window.innerHeight
+
+
+TODO
+- snippet for svg sprite
